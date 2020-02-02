@@ -2,17 +2,17 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <title>React Todo App</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <meta charset="UTF-8">
+  <title>React Todo App</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 
 <body>
-    <div id="root"></div>
-    <script type="text/babel">
+  <div id="root"></div>
+  <script>
     (() => {
       function TodoHeader(props) {
         const remaining = props.todos.filter(todo => {
@@ -66,8 +66,8 @@
       function TodoForm(props) {
         return (
           <form onSubmit={props.addTodo}>
-            <input type="text" value={props.item} onChange={props.updateItem}/>
-            <input type="submit" value="Add"/>
+            <input type="text" value={props.item} onChange={props.updateItem} />
+            <input type="submit" value="Add" />
           </form>
         );
       }
@@ -140,7 +140,7 @@
 
         checkTodo(todo) {
           const todos = this.state.todos.map(todo => {
-            return {id: todo.id, title: todo.title, isDone: todo.isDone};
+            return { id: todo.id, title: todo.title, isDone: todo.isDone };
           });
 
           const pos = this.state.todos.map(todo => {
@@ -192,10 +192,11 @@
       }
 
       ReactDOM.render(
-        <App/>,
+        <App />,
         document.getElementById('root')
       );
     })();
+
   </script>
 </body>
 
